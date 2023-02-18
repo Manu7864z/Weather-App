@@ -1,4 +1,4 @@
-/* /* .main {
+/* .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -137,6 +137,7 @@
   height: 200%;
   background: var(--tile-border);
 }
+
 
 .thirteen::after {
   inset: 0;
@@ -171,6 +172,7 @@
     transform: none;
   }
 }
+
 
 @media (max-width: 700px) {
   .content {
@@ -273,4 +275,5 @@
   to {
     transform: rotate(0deg);
   }
-} */
+}
+ */

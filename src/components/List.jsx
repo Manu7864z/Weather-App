@@ -1,12 +1,7 @@
-/* import { useEffect } from "react"; */
 import styled from "styled-components";
 
-export default function List({ activities, isGoodWeather }) {
+export default function List({ activities, isGoodWeather, onDeleteActivity }) {
   return (
-    /* useEffect(() => {
-    async function hello() {
-      {
-        await ( */
     <>
       <StyledH2>
         {isGoodWeather
@@ -15,7 +10,10 @@ export default function List({ activities, isGoodWeather }) {
       </StyledH2>
       <StyledList>
         {activities.map((activity) => (
-          <StyledListItem key={activity.id}>{activity.name}</StyledListItem>
+          <StyledListItem key={activity.id}>
+            {activity.name}
+            <button onClick={() => onDeleteActivity(activity.id)}>X</button>
+          </StyledListItem>
         ))}
       </StyledList>
     </>
