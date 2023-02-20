@@ -92,5 +92,6 @@ const StyledHeading = styled.header`
     text-align: center;
     padding: 0;
     margin: 0;
+    font-size: 2.5rem;
   }
 `;

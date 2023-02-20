@@ -44,7 +44,7 @@ const StyledListItem = styled.li`
   opacity: 0.9;
   box-shadow: 0 5px 5px 0px #0c0b18;
 
-  cursor: progress;
+  cursor: pointer;
 
   &:hover {
     background-color: #79797b;
