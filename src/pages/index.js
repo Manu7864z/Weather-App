@@ -28,7 +28,7 @@ export default function Home() {
       }
     }
     fetchWeather();
-    return weather;
+    /* return weather; */
   }, []);
 
   const filteredActivities = activities.filter(
@@ -65,7 +65,7 @@ const StyledMain = styled.main`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 60px;
   padding: 0;
 `;
 
@@ -77,15 +77,16 @@ const StyledHeading = styled.header`
   padding: 0;
   height: 50px;
   width: 100%;
-  background-color: grey;
+  background-color: #3d2682;
   position: fixed;
   top: 0;
   bottom: 100px;
   left: 0;
   right: 0;
   z-index: 1;
-  border: 1px solid black;
+  border: 1px outset #3d2682;
   opacity: 0.8;
+  box-shadow: 0 10px 10px 0 black;
 
   h2 {
     color: white;

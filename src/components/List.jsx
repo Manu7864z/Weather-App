@@ -12,7 +12,9 @@ export default function List({ activities, isGoodWeather, onDeleteActivity }) {
         {activities.map((activity) => (
           <StyledListItem key={activity.id}>
             {activity.name}
-            <button onClick={() => onDeleteActivity(activity.id)}>X</button>
+            <StyledButton onClick={() => onDeleteActivity(activity.id)}>
+              X
+            </StyledButton>
           </StyledListItem>
         ))}
       </StyledList>
@@ -27,6 +29,7 @@ const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 6px;
+  align-items: center;
 `;
 
 const StyledListItem = styled.li`
@@ -38,20 +41,36 @@ const StyledListItem = styled.li`
   color: #fffcfc;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  height: 20px;
+  height: 40px;
   width: 90%;
-  border: 3px #261d899e outset;
+  border: 3px #231a839e outset;
   opacity: 0.9;
   box-shadow: 0 5px 5px 0px #0c0b18;
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
 
   cursor: pointer;
-
-  &:hover {
-    background-color: #79797b;
-  }
 `;
 
 const StyledH2 = styled.h2`
   text-align: center;
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: -10px;
+`;
+
+const StyledButton = styled.button`
+  background-color: #3d2682;
+  border-radius: 10px;
+  border: 2px #fefefe outset;
+  box-shadow: 0 10px 10px 2px #0b0c0d;
+  color: #f4eded;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: -10px;
+  height: 30px;
+  width: 30px;
 `;
